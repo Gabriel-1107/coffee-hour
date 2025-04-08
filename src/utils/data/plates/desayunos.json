@@ -1,0 +1,349 @@
+[
+  {
+    "id": 1,
+    "slug": "Chilaquiles",
+    "prettyName": "Chilaquiles",
+    "description": "Refrescantes bebidas frías con una variedad de sabores dulces y cremosos.",
+    "plates": [
+      {
+        "name": "Chilaquiles verdes / rojos / divorciados",
+        "description": "",
+        "price": 110
+      },
+      {
+        "name": "Chilaquiles con Chorizo",
+        "description": "",
+        "price": 145
+      },
+      {
+        "name": "Chilaquiles con huevo (al gusto)",
+        "description": "",
+        "price": 145
+      },
+      {
+        "name": "Chilaquiles con Pollo",
+        "description": "",
+        "price": 149
+      },
+      {
+        "name": "Chilaquiles con Arrachera / Birria (120 gr)",
+        "description": "",
+        "price": 175
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "Huevos",
+    "prettyName": "Huevos",
+    "description": "",
+    "plates": [
+      {
+        "name": "Naturales",
+        "description": "(Revueltos o Estrellados)",
+        "price": 99
+      },
+      {
+        "name": "Benedictinos",
+        "description": "(Jamón de Pavo / Selva Negra)",
+        "price": 155
+      },
+      {
+        "name": "Benedictinos",
+        "description": "(Con Salmón)",
+        "price": 175
+      },
+      {
+        "name": "Revueltos o Estrellados",
+        "description": "(Con Jamón, Tocino o Chorizo)",
+        "price": 125
+      },
+      {
+        "name": "A la Mexicana ",
+        "description": "",
+        "price": 110
+      },
+      {
+        "name": "Rancheros",
+        "description": "",
+        "price": 125
+      },
+      {
+        "name": "Motuleños",
+        "description": "",
+        "price": 130
+      },
+      {
+        "name": "Sandwich de Huevo",
+        "description": "",
+        "price": 110
+      },
+      {
+        "name": "Huevos Slim",
+        "description": "(4 claras de huevo revuelto con jamón o tocino)",
+        "price": 155
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "Omelettes",
+    "prettyName": "Omelettes",
+    "description": "Disfruta de nuestras deliciosas bebidas de chai, cálidas o frías, con un toque especiado irresistible.",
+    "plates": [
+      {
+        "name": "Clásico ",
+        "description": "(Con Jamón o Tocino y Queso)",
+        "price": 137
+      },
+      {
+        "name": "Vegetariano",
+        "description": "(Champiñones, Cebolla y Jitomate)",
+        "price": 130
+      },
+      {
+        "name": "Choriqueso",
+        "description": "",
+        "price": 145
+      },
+      {
+        "name": "Western",
+        "description": "(Jitomate, Cebolla, Marrón y Tocino)",
+        "price": 145
+      },
+      {
+        "name": "Mestizo",
+        "description": "(Salsa a la Mexiacna y Queso Panela)",
+        "price": 145
+      },
+      {
+        "name": "Omelette de Puras Claras",
+        "description": "(Proteína a Elegir)",
+        "price": 175
+      },
+      {
+        "name": "Omelette con Espinacas",
+        "description": "",
+        "price": 155
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "Bagels",
+    "prettyName": "Bagels",
+    "description": "Saborea la intensidad de nuestros espressos con diversas presentaciones para cada gusto.",
+    "plates": [
+      {
+        "name": "Bagel Country",
+        "description": "(Jamón de Pavo y Queso Suizo)",
+        "price": 113
+      },
+      {
+        "name": "Bagel Polluelo",
+        "description": "(Pollo a la plancha y Queso Suizo)",
+        "price": 137
+      },
+      {
+        "name": "Bagel Italiano",
+        "description": "(Champiñones y Queso Manchego)",
+        "price": 115
+      },
+      {
+        "name": "Bagel Slim",
+        "description": "(Jamón de Pavo y Queso Panela) ",
+        "price": 115
+      },
+      {
+        "name": "Bagel Tuna",
+        "description": "(Atún preparado con Queso Crema)",
+        "price": 127
+      },
+      {
+        "name": "Bagel Americano",
+        "description": "(Queso Crema y Tocino)",
+        "price": 99
+      },
+      {
+        "name": "Bagel Azteca",
+        "description": "(Frijoles y Queso Gratinado)",
+        "price": 99
+      },
+      {
+        "name": "Bagel Dulce",
+        "description": "(Mermelada y Queso Crema)",
+        "price": 75
+      },
+      {
+        "name": "Bagel Bariloche",
+        "description": "(Salmón, Queso Crema y Alcaparras)",
+        "price": 175
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "Croissants",
+    "prettyName": "Croissants",
+    "description": "Déjate cautivar por nuestra selección de cafés artesanales en diferentes presentaciones.",
+    "plates": [
+      {
+        "name": "Croisants Jamón y Queso",
+        "description": "",
+        "price": 110
+      },
+      {
+        "name": "Croissants con Queso Manchengo",
+        "description": "",
+        "price": 99
+      },
+      {
+        "name": "Croissant Pollo a la Plancha",
+        "description": "",
+        "price": 130
+      },
+      {
+        "name": "Croissant Pollo Empanizado ",
+        "description": "",
+        "price": 140
+      },
+      {
+        "name": "Croissant Queso Philadelphia",
+        "description": "",
+        "price": 70
+      },
+      {
+        "name": "Croissant con Mermelada de Fresa",
+        "description": "",
+        "price": 65
+      },
+      {
+        "name": "Croissant Mañanero",
+        "description": "(Huevo y Papa Hash Brown)",
+        "price": 127
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "Hot Cakes y Waffles",
+    "prettyName": "Hot Cakes y Waffles",
+    "description": "",
+    "plates": [
+      {
+        "name": "Original",
+        "description": "",
+        "price": 105
+      },
+      {
+        "name": "Americano",
+        "description": "Con Jamón o Tocino",
+        "price": 120
+      },
+      {
+        "name": "Fresa o Plátano",
+        "description": "",
+        "price": 145
+      },
+      {
+        "name": "Gringo Viejo",
+        "description": "Huevo revuelto o estrellado y jamon y tocino",
+        "price": 175
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "Molletes",
+    "prettyName": "Molletes",
+    "description": "",
+    "plates": [
+      {
+        "name": "Molletes Dulces",
+        "description": "",
+        "price": 75
+      },
+      {
+        "name": "Molletes Mexicanos",
+        "description": "",
+        "price": 95
+      },
+      {
+        "name": "Molletes Country",
+        "description": "(Con Jamón o Tocino)",
+        "price": 145
+      },
+      {
+        "name": "Molletes Mixtos",
+        "description": "(Dulce y a la Mexicana)",
+        "price": 105
+      },
+      {
+        "name": "Molletes Rancheros",
+        "description": "(Frijoles, queso gratinado y huevo montado)",
+        "price": 120
+      },
+      {
+        "name": "Molletes Chilangos",
+        "description": "(Con chilaquiles veredes o rojos)",
+        "price": 115
+      },
+      {
+        "name": "Molletes Mixtos plus",
+        "description": "(Uno Chilango y otro Country)",
+        "price": 135
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "Enfrijoladas",
+    "prettyName": "Enfrijoladas",
+    "description": "",
+    "plates": [
+      {
+        "name": "Enfrijoladas con queso",
+        "description": "",
+        "price": 110
+      },
+      {
+        "name": "Enfrijoladas con pollo",
+        "description": "",
+        "price": 140
+      },
+      {
+        "name": "Enfrijoladas con queso y chorizo",
+        "description": "",
+        "price": 145
+      },
+      {
+        "name": "Enfrijoladas con huevo al gusto",
+        "description": "",
+        "price": 140
+      },
+      {
+        "name": "Enfrijoladas con arrachera",
+        "description": "",
+        "price": 165
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "enchiladas",
+    "prettyName": "Enchiladas",
+    "description": "(Incluyen lechuga, jitomate, cebolla, queso fresco y crema)",
+    "plates": [
+      {
+        "name": "Enchiladas de pollo rojas o verdes",
+        "description": "",
+        "price": 149
+      },
+      {
+        "name": "Enchiladas de queso rojas o verdes",
+        "description": "",
+        "price": 125
+      }
+    ]
+  }
+]

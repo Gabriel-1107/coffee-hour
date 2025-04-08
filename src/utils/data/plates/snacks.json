@@ -1,0 +1,261 @@
+[
+  {
+    "id": 1,
+    "slug": "Baguettes & Sandwiches",
+    "prettyName": "Baguettes & Sandwiches",
+    "description": "",
+    "plates": [
+      { "name": "De atún", "description": "", "price": 120 },
+      { "name": "De pavo", "description": "", "price": 120 },
+      { "name": "Panela", "description": "", "price": 120 },
+      { "name": "Vegetariano", "description": "Queso manchego", "price": 130 },
+      { "name": "Pollo a la plancha", "description": "", "price": 140 },
+      { "name": "Pollo empanizado", "description": "", "price": 150 },
+      { "name": "Pollo empanizado BBQ", "description": "", "price": 150 },
+      { "name": "Club Sandwich", "description": "", "price": 155 },
+      { "name": "Selva negra", "description": "", "price": 155 }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "Hamburguesas",
+    "prettyName": "Hamburguesas",
+    "description": "",
+    "plates": [
+      { "name": "Hamburguesa sencilla", "description": "", "price": 99 },
+      { "name": "Hamburguesa americana", "description": "", "price": 115 },
+      { "name": "Hamburguesa Hawaiana", "description": "", "price": 130 },
+      {
+        "name": "Hamburguesa de pollo a la plancha",
+        "description": "",
+        "price": 137
+      },
+      {
+        "name": "Hamburguesa pollo empanizado",
+        "description": "",
+        "price": 137
+      },
+      { "name": "Hamburguesa de camarón", "description": "", "price": 150 },
+      { "name": "Hamburguesa gourmet", "description": "", "price": 155 }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "Croissants",
+    "prettyName": "Croissants",
+    "description": "",
+    "plates": [
+      { "name": "Croissant jamón con queso", "description": "", "price": 110 },
+      {
+        "name": "Croissant con queso manchego",
+        "description": "",
+        "price": 99
+      },
+      {
+        "name": "Croissant pollo a la plancha",
+        "description": "",
+        "price": 130
+      },
+      { "name": "Croissant pollo empanizado", "description": "", "price": 140 },
+      { "name": "Croissant philadelphia", "description": "", "price": 130 },
+      {
+        "name": "Croissant con mermelada de fresa",
+        "description": "",
+        "price": 65
+      },
+      {
+        "name": "Croissant mañanero",
+        "description": "Jamón, queso manchego, huevo al gusto y hash brown",
+        "price": 150
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "Crepas-Dulces",
+    "prettyName": "Crepas Dulces",
+    "description": "",
+    "plates": [
+      { "name": "Nutella", "description": "", "price": 105 },
+      { "name": "Cajeta", "description": "", "price": 105 },
+      {
+        "name": "Crema de cacahuate",
+        "description": "Con mermelada de fresa",
+        "price": 105
+      },
+      {
+        "name": "Queso crema",
+        "description": "Con mermelada y frutos rojos",
+        "price": 115
+      },
+      {
+        "name": "Queso crema y frutas",
+        "description": "Fresa y plátano",
+        "price": 125
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "Crepas-Saladas",
+    "prettyName": "Crepas Saladas",
+    "description": "",
+    "plates": [
+      { "name": "Jamón con queso mozzarella", "description": "", "price": 145 },
+      {
+        "name": "Italiano",
+        "description": "Champiñones y queso",
+        "price": 145
+      },
+      { "name": "Pollo", "description": "Tinga", "price": 175 },
+      { "name": "Hawaiana", "description": "Jamón, queso y piña", "price": 150 }
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "Crepas Especiales",
+    "prettyName": "Crepas Especiales",
+    "description": "",
+    "plates": [
+      {
+        "name": "Fruti crepa",
+        "description": "Queso crema, fresas, plátano y mermelada de fresa",
+        "price": 140
+      },
+      {
+        "name": "Delicia",
+        "description": "Queso crema, mermelada, fresa, zarzamora y nuez",
+        "price": 130
+      },
+      {
+        "name": "Bombón",
+        "description": "Queso crema, plátano, nuez, bombón y chocolate líquido",
+        "price": 130
+      },
+      {
+        "name": "Oreo",
+        "description": "Queso crema, oreo, chocolate líquido y leche condensada",
+        "price": 130
+      },
+      {
+        "name": "KitKat",
+        "description": "Queso crema, plátano, KitKat y chocolate líquido",
+        "price": 130
+      },
+      {
+        "name": "M&M",
+        "description": "Queso crema, plátano, M&M y chocolate líquido",
+        "price": 130
+      }
+    ]
+  },
+
+  {
+    "id": 7,
+    "slug": "Aperitivos",
+    "prettyName": "Aperitivos",
+    "description": "",
+    "plates": [
+      { "name": "Alitas búfalo", "description": "", "price": 130 },
+      { "name": "Alitas BBQ", "description": "", "price": 130 },
+      { "name": "Papas a la francesa", "description": "", "price": 69 },
+      {
+        "name": "Papas a la francesa gratinadas",
+        "description": "",
+        "price": 75
+      },
+      { "name": "Papas ajo", "description": "", "price": 79 },
+      {
+        "name": "Nachos con arrachera",
+        "description": "Base de frijoles con queso manchego gratinado, arrachera (120g), salsa molcajete y guacamole",
+        "price": 130
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "Ensaladas",
+    "prettyName": "Ensaladas",
+    "description": "",
+    "plates": [
+      {
+        "name": "Ensalada de rollos de jamón con queso",
+        "description": "",
+        "price": 127
+      },
+      {
+        "name": "Ensalada de pollo a la plancha",
+        "description": "",
+        "price": 137
+      },
+      {
+        "name": "Ensalada de pollo empanizado",
+        "description": "",
+        "price": 145
+      },
+      {
+        "name": "Ensalada de pollo empanizado BBQ",
+        "description": "",
+        "price": 150
+      },
+      {
+        "name": "Ensalada de frutas rojas",
+        "description": "Espinaca, arándano, fresa y manzana",
+        "price": 120
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "Bagels",
+    "prettyName": "Bagels",
+    "description": "",
+    "plates": [
+      {
+        "name": "Bagel Country",
+        "description": "Jamón de pavo y queso suizo",
+        "price": 113
+      },
+      {
+        "name": "Bagel Slim",
+        "description": "Jamón de pavo y queso panela",
+        "price": 115
+      },
+      {
+        "name": "Bagel Gourmet",
+        "description": "Queso crema y nuez",
+        "price": 120
+      },
+      {
+        "name": "Bagel Americano",
+        "description": "Queso crema y tocino",
+        "price": 115
+      },
+      {
+        "name": "Bagel Tradicional",
+        "description": "Queso crema y zarzamora",
+        "price": 115
+      },
+      {
+        "name": "Bagel Dulce",
+        "description": "Mermelada y queso crema",
+        "price": 105
+      },
+      {
+        "name": "Bagel Noruego",
+        "description": "Salmón, queso crema y alcaparras",
+        "price": 135
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "slug": "Burritos",
+    "prettyName": "Burritos",
+    "description": "",
+    "plates": [
+      { "name": "Arrachera / Birria", "description": "", "price": 140 },
+      { "name": "Pollo a la plancha", "description": "", "price": 140 }
+    ]
+  }
+]

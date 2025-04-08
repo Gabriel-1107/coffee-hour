@@ -9,13 +9,28 @@ export default {
         "box-bg": "rgb(var(--color-box))",
         "box-shadow": "rgb(var(--box-sd))",
         "box-border": "rgb(var(--box-border))",
-        primary: "#1d4ed8",
+        primary: "#654321",
         "heading-1": "rgb(var(--heading-1))",
         "heading-2": "rgb(var(--heading-2))",
         "heading-3": "rgb(var(--heading-3))",
+        customYellow: "#FFD700", // Nuevo color amarillo personalizado
       },
       screens: {
         midmd: "880px",
+      },
+      animation: {
+        fade: "fadeInUp 1s both",
+        marquee: "marquee 20s linear infinite", // Animación agregada
+      },
+      keyframes: {
+        fadeInUp: {
+          "0%": { opacity: 0, transform: "translateY(2rem)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
     },
   },

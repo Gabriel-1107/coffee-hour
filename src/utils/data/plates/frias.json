@@ -1,0 +1,148 @@
+[
+  {
+    "id": 1,
+    "slug": "malteadas",
+    "prettyName": "Malteadas",
+    "description": "",
+    "plates": [
+      { "name": "Fresa, Vainilla y Chocolate", "description": "", "price": 70 },
+      { "name": "Chocomilk", "description": "", "price": 40 },
+      { "name": "Licuado de fruta en leche", "description": "", "price": 60 },
+      { "name": "Licuado de fruta de yogurt", "description": "", "price": 70 }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "frappe-molecular",
+    "prettyName": "Frappé Molecular",
+    "description": "",
+    "plates": [
+      { "name": "Manzana verde", "description": "", "price": 95 },
+      { "name": "Piña", "description": "", "price": 95 },
+      { "name": "Mango", "description": "", "price": 95 },
+      { "name": "Fresa", "description": "", "price": 95 }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "frappes-tentadores",
+    "prettyName": "Frappés Tentadores",
+    "description": "Estas bebidas incluyen crema batida, si no deseas tiene el mismo costo",
+    "plates": [
+      {
+        "name": "Frappelín (con chocolate y fresa)",
+        "description": "",
+        "price": 95
+      },
+      { "name": "Frappé chocolate dálmata", "description": "", "price": 105 },
+      {
+        "name": "Frappó (con chocolate blanco y fresa)",
+        "description": "",
+        "price": 105
+      },
+      { "name": "Frappé mazapán", "description": "", "price": 105 },
+      { "name": "Frappé Ferrero", "description": "", "price": 115 },
+      { "name": "Frappé Gansito", "description": "", "price": 105 },
+      { "name": "Frappé Magnum", "description": "", "price": 135 },
+      { "name": "Frappé Conejito Turin", "description": "", "price": 105 },
+      { "name": "Frappé KitKat", "description": "", "price": 115 },
+      { "name": "Frappé Kinder Delice", "description": "", "price": 115 },
+      { "name": "Frappé Nutella", "description": "", "price": 105 },
+      { "name": "Frappé Chocoreta", "description": "", "price": 105 }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "capuchino-frappe",
+    "prettyName": "Capuchino Frappé",
+    "description": "Descafeinado +$9 pesos extra",
+    "plates": [
+      { "name": "Capuchino frappé", "description": "", "price": 75 },
+      { "name": "Capuchino oreo", "description": "", "price": 80 },
+      { "name": "Capuchino caramelo", "description": "", "price": 85 },
+      { "name": "Capuchino cajeta", "description": "", "price": 85 },
+      { "name": "Capuchino moka", "description": "", "price": 85 },
+      { "name": "Capuchino moka oreo", "description": "", "price": 90 },
+      { "name": "Capuchino con nieve", "description": "", "price": 110 },
+      { "name": "Capuchino con kalhúa", "description": "", "price": 110 },
+      { "name": "Capuchino con baileys", "description": "", "price": 140 }
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "tes",
+    "prettyName": "Tés",
+    "description": "",
+    "plates": [
+      {
+        "name": "Té infusiones",
+        "description": "(Manzanilla, rooibos con canela, jazmín, menta...)",
+        "price": 50
+      },
+      {
+        "name": "Té tisanas",
+        "description": "(Fresca, mojito, frutos rojos, mango dorado...)",
+        "price": 60
+      },
+      { "name": "Té chai frío", "description": "", "price": 105 },
+      { "name": "Té chai frappé", "description": "", "price": 105 },
+      { "name": "Té tisana frappé", "description": "", "price": 85 },
+      { "name": "Té matcha frío", "description": "", "price": 95 },
+      { "name": "Té matcha frappé", "description": "", "price": 95 },
+      { "name": "Taro en las rocas", "description": "", "price": 95 },
+      { "name": "Taro frappé", "description": "", "price": 95 }
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "smoothies",
+    "prettyName": "Smoothies",
+    "description": "Todos los precios incluyen IVA.",
+    "plates": [
+      { "name": "Una sola fruta", "description": "", "price": 75 },
+      {
+        "name": "Clásico (jugo de naranja, fresa y plátano)",
+        "description": "",
+        "price": 75
+      },
+      {
+        "name": "Peligrosamente rojo (jugo de naranja, fresa y frambuesa)",
+        "description": "",
+        "price": 75
+      },
+      {
+        "name": "Cookies and cream (yogurt, vainilla, plátano y oreo)",
+        "description": "",
+        "price": 75
+      },
+      {
+        "name": "Get up and mango (yogurt, mango y durazno)",
+        "description": "",
+        "price": 75
+      },
+      {
+        "name": "Blue banana (yogurt, mora azul, plátano)",
+        "description": "",
+        "price": 75
+      },
+      {
+        "name": "Sunrise strawberry (yogurt, fresa y plátano)",
+        "description": "",
+        "price": 75
+      },
+      {
+        "name": "Bad boys (yogurt, mora azul, fresa)",
+        "description": "",
+        "price": 75
+      },
+      {
+        "name": "Chamoy (frappé de limón, chamoy y tajín)",
+        "description": "",
+        "price": 75
+      },
+      { "name": "Hawaiano", "description": "", "price": 75 },
+      { "name": "Matcha melón", "description": "", "price": 75 },
+      { "name": "Piña enchilada", "description": "", "price": 75 }
+    ]
+  }
+]

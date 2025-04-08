@@ -3,28 +3,40 @@ import Container from "../components/shared/Container.astro";
 import Navitem from "../components/shared/Navitem.astro";
 import BtnLink from "../components/shared/BtnLink.astro";
 
+
+ 
 const navItems = [
   {
-    href: "#",
-    text: "Home",
+    href: "/coffee-hour",
+    text: "Inicio",
   },
   {
-    href: "#solutions",
-    text: "Solutions",
+    href: "",
+    text: "Menu",
+    submenu: [
+      { href: "/coffee-hour/desayunos", text: "Desayunos" },
+      { href: "/coffee-hour/snacks", text: "Snacks" },
+      { href: "/coffee-hour/bebidas-calientes", text: "Bebidas Calientes" },
+      { href: "/coffee-hour/bebidas-frias", text: "Bebidas Frías" },
+      // { href: "/coffee-hour/promociones", text: "Promociones" },
+    ],
   },
   {
-    href: "#services",
-    text: "Services",
+    href: "/coffee-hour/galeria",
+    text: "Galeria",
   },
   {
-    href: "#features",
-    text: "Features",
+    href: "/coffee-hour/videos",
+    text: "Videos",
   },
   {
-    href: "#faq",
-    text: "About us",
+    href: "/coffee-hour/blogs",
+    text: "Blogs",
   },
 ];
+
+
+
 ---
 
 <header class="absolute inset-x-0 top-0 z-50 py-6">
@@ -32,40 +44,16 @@ const navItems = [
     <nav class="w-full flex justify-between gap-6 relative">
       <!-- logo -->
       <div class="min-w-max inline-flex relative">
-        <a href="/agency-template" class="relative flex items-center gap-3">
-          <div class="relative w-7 h-7 overflow-hidden flex rounded-xl">
-            <svg
-              id="logo-15"
-              width="100%"
-              height="100%"
-              viewBox="0 0 49 48"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M24.5 12.75C24.5 18.9632 19.4632 24 13.25 24H2V12.75C2 6.53679 7.03679 1.5 13.25 1.5C19.4632 1.5 24.5 6.53679 24.5 12.75Z"
-                class="ccustom"
-                fill="#17CF97"></path>
-              <path
-                d="M24.5 35.25C24.5 29.0368 29.5368 24 35.75 24H47V35.25C47 41.4632 41.9632 46.5 35.75 46.5C29.5368 46.5 24.5 41.4632 24.5 35.25Z"
-                class="ccustom"
-                fill="#17CF97"></path>
-              <path
-                d="M2 35.25C2 41.4632 7.03679 46.5 13.25 46.5H24.5V35.25C24.5 29.0368 19.4632 24 13.25 24C7.03679 24 2 29.0368 2 35.25Z"
-                class="ccustom"
-                fill="#17CF97"></path>
-              <path
-                d="M47 12.75C47 6.53679 41.9632 1.5 35.75 1.5H24.5V12.75C24.5 18.9632 29.5368 24 35.75 24C41.9632 24 47 18.9632 47 12.75Z"
-                class="ccustom"
-                fill="#17CF97"></path>
-            </svg>
+        <a href="/coffee-hour" class="-m-1.5 p-1.5 flex items-center justify-center">
+          <div class="logo-container">
+            <img class="logo-img" src="../../src/assets/images/logocafe.png" alt="logo">
           </div>
           <div class="inline-flex text-lg font-semibold text-heading-1">
-            SocialMediaAgency
+            COFFEE HOUR
           </div>
         </a>
       </div>
-
+      
       <div
         data-nav-overlay
         aria-hidden="true"
@@ -90,7 +78,7 @@ const navItems = [
           class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0"
         >
           <BtnLink
-            text="Get Started"
+            text="Español"
             href="#cta"
             className="flex justify-center w-full sm:w-max"
             variant="primary"
@@ -158,3 +146,29 @@ const navItems = [
     </nav>
   </Container>
 </header>
+
+<style>
+  .logo-container {
+    width: 80px; /* Tamaño del contenedor */
+    height: 80px; /* Igual al ancho para mantener proporción */
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    overflow: hidden; /* Oculta las esquinas sobrantes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se deforme */
+  }
+
+  /* Ajustes para dispositivos móviles */
+  @media (max-width: 768px) { 
+    .logo-container {
+      width: 50px;
+      height: 50px;
+    }
+  }
+</style>

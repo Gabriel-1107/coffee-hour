@@ -12,36 +12,48 @@ const { title, features, icon } = Astro.props;
 
 <div
   class="p-5 sm:p-6 lg:p-8 relative overflow-hidden rounded-3xl shadow-md shadow-slate-700 dark:shadow-slate-900
-  bg-gradient-to-tr from-slate-100/70 to-zinc-200/60 dark:from-slate-800/10 dark:to-zinc-800/10 backdrop-blur-md hover:bg-black/10 hover:dark:bg-slate-700/10"
+  bg-gradient-to-tr from-slate-100/70 to-zinc-200/60 dark:from-slate-800/10 dark:to-zinc-800/10 backdrop-blur-md
+  transition-transform duration-300 ease-out hover:scale-105 hover:shadow-lg hover:shadow-slate-500/50 hover:dark:shadow-slate-900/50
+  hover:bg-gradient-to-br hover:from-slate-200 hover:to-zinc-300 dark:hover:from-slate-700 dark:hover:to-zinc-800"
 >
-  <div
-    class="rounded-xl p-3 text-heading-1 w-max relative bg-slate-200 dark:bg-slate-800"
-  >
-    <slot set:html={icon} />
+  <div class="flex items-center space-x-4">
+    <div class="rounded-xl p-3 text-heading-1 w-max transition-all duration-300 ease-out hover:scale-110">
+      <slot set:html={icon} />
+    </div>
+    <div>
+      <h2 class="text-lg md:text-xl font-semibold text-heading-2">
+        {title}
+      </h2>
+    </div>
   </div>
-  <div class="mt-6 space-y-4 relative">
-    <h2 class="text-lg md:text-xl font-semibold text-heading-2">
-      {title}
-    </h2>
-    <Paragraph>
-      <div
-        class="mt-8 space-y-4 text-heading-3 font-medium list-outside list-disc"
-      >
-        {
-          features.map((feature) => {
-            return (
-              <div class="flex items-center font-medium">
-                <span class="font-bold rounded-full w-8 h-8 mr-3 inline-flex justify-center items-center text-primary dark:text-white">
-                  &checkmark;
-                </span>
-                {feature}
-              </div>
-            );
-          })
-        }
-      </div>
-    </Paragraph>
-  </div>
+
+  <Paragraph>
+    <div
+      class="mt-8 space-y-4 text-heading-3 font-medium list-outside list-disc"
+    >
+      {
+        features.map((feature) => {
+          return (
+            <div class="flex items-center font-medium">
+              <span class="font-bold rounded-full w-8 h-8 mr-3 inline-flex justify-center items-center text-primary dark:text-white
+                bg-gray-300 dark:bg-gray-700 transition-colors duration-300 hover:bg-primary hover:text-white dark:hover:bg-primary/80">
+                &checkmark;
+              </span>
+              {feature}
+            </div>
+          );
+        })
+      }
+    </div>
+  </Paragraph>
+
+  <!-- Brillo sutil en hover -->
+  <span
+    class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full transition-all duration-300 ease-out
+    hover:w-40 hover:opacity-80"
+  ></span>
+</div>
+
   <!-- <span
     class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"
   ></span> -->

@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "slug": "Espresso",
+    "prettyName": "Espresso",
+    "description": "Refrescantes bebidas frías con una variedad de sabores dulces y cremosos.",
+    "plates": [
+      {
+        "name": "Espresso Sencillo",
+        "description": "",
+        "price": 37
+      },
+      {
+        "name": "Espresso Doble",
+        "description": "",
+        "price": 45
+      },
+      {
+        "name": "Espresso con Panna",
+        "description": "",
+        "price": 59
+      },
+      {
+        "name": "Espresso Cortado",
+        "description": "",
+        "price": 53
+      },
+      {
+        "name": "Espresso Affogato",
+        "description": "",
+        "price": 70
+      },
+      {
+        "name": "Carajillo",
+        "description": "",
+        "price": 145
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "Espresso Americano",
+    "prettyName": "Espresso Americano",
+    "description": "",
+    "plates": [
+      {
+        "name": "Espresso Americano",
+        "description": "",
+        "price": 37
+      },
+      {
+        "name": "Espresso con Kalhúa",
+        "description": "",
+        "price": 69
+      },
+      {
+        "name": "Espresso con Baileys",
+        "description": "",
+        "price": 105
+      },
+      {
+        "name": "Espresso Americano Frío",
+        "description": "",
+        "price": 53
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "Capuchino",
+    "prettyName": "Capuchino",
+    "description": "Disfruta de nuestras deliciosas bebidas de chai, cálidas o frías, con un toque especiado irresistible.",
+    "plates": [
+      {
+        "name": "Capuchino ",
+        "description": "",
+        "price": 50
+      },
+      {
+        "name": "Capuchino Moka",
+        "description": "",
+        "price": 65
+      },
+      {
+        "name": "Capuchino con Cajeta",
+        "description": "",
+        "price": 63
+      },
+      {
+        "name": "Capuchino con Baileys",
+        "description": "",
+        "price": 110
+      },
+      {
+        "name": "Capuchino con Kalhúa",
+        "description": "",
+        "price": 75
+      },
+      {
+        "name": "Capuchino Grande",
+        "description": "",
+        "price": 75
+      },
+      {
+        "name": "Capuchino Saborizado",
+        "description": "",
+        "price": 65
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "Latte",
+    "prettyName": "Latte",
+    "description": "Saborea la intensidad de nuestros espressos con diversas presentaciones para cada gusto.",
+    "plates": [
+      {
+        "name": "Latte Caliente",
+        "description": "",
+        "price": 60
+      },
+      {
+        "name": "Latte Caliente (Saborizado) ",
+        "description": "",
+        "price": 50
+      },
+      {
+        "name": "Latte Frío",
+        "description": "",
+        "price": 70
+      },
+      {
+        "name": "Latte Frío (Saborizado)",
+        "description": "Espresso suave coronado con una generosa porción de crema batida para un toque dulce y cremoso.",
+        "price": 80
+      },
+      {
+        "name": "Latte Frío Moka",
+        "description": "Exquisito espresso servido sobre una bola de helado de vainilla, una combinación perfecta de calor y frío.",
+        "price": 80
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "Chocolates",
+    "prettyName": "Chocolates",
+    "description": "Déjate cautivar por nuestra selección de cafés artesanales en diferentes presentaciones.",
+    "plates": [
+      {
+        "name": "Chocolate Obscuro",
+        "description": "",
+        "price": 63
+      },
+      {
+        "name": "Chocolate Obscuro con Menta",
+        "description": "",
+        "price": 80
+      },
+      {
+        "name": "Chocolate Blanco",
+        "description": "",
+        "price": 63
+      },
+      {
+        "name": "Chocolate Dalmata",
+        "description": "",
+        "price": 70
+      },
+      {
+        "name": "Chocolate Obscuro con Bombones",
+        "description": "Suave café con una generosa cantidad de leche vaporizada, creando una textura cremosa y delicada.",
+        "price": 80
+      }
+    ]
+  }
+]

@@ -1,12 +1,36 @@
 ---
-export interface Props{
-    href:string,
-    text:string,
+// components/shared/Navitem.astro
+export interface Props {
+  href: string;
+  text: string;
+  submenu?: { href: string; text: string }[];
 }
-const {href, text} = Astro.props
+const { href, text, submenu = [] } = Astro.props;
 ---
-<li>
-    <a href={href} class="duration-300 font-medium ease-linear hover:text-primary py-3">
-    {text}
+<li class="relative group">
+    <a
+      href={href}
+      class="inline-block px-4 py-2 hover:text-primary transition-colors"
+    >
+      {text}
     </a>
-</li>
+  
+    {submenu.length > 0 && (
+        <div class="hidden lg:block lg:absolute lg:top-full lg:left-0 lg:mt-2 lg:w-48 lg:bg-white lg:shadow-lg lg:rounded-md lg:opacity-0 lg:invisible group-hover:lg:visible group-hover:lg:opacity-100 lg:transition-all lg:duration-300 z-50">
+          <ul class="py-1">
+            {submenu.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+                >
+                  {item.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      
+  </li>
+  
