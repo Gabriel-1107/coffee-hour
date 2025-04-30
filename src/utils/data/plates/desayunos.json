@@ -3,7 +3,7 @@
     "id": 1,
     "slug": "Chilaquiles",
     "prettyName": "Chilaquiles",
-    "description": "Refrescantes bebidas frías con una variedad de sabores dulces y cremosos.",
+    "description": "",
     "plates": [
       {
         "name": "Chilaquiles verdes / rojos / divorciados",
@@ -89,7 +89,7 @@
     "id": 3,
     "slug": "Omelettes",
     "prettyName": "Omelettes",
-    "description": "Disfruta de nuestras deliciosas bebidas de chai, cálidas o frías, con un toque especiado irresistible.",
+    "description": "",
     "plates": [
       {
         "name": "Clásico ",
@@ -132,7 +132,7 @@
     "id": 4,
     "slug": "Bagels",
     "prettyName": "Bagels",
-    "description": "Saborea la intensidad de nuestros espressos con diversas presentaciones para cada gusto.",
+    "description": "",
     "plates": [
       {
         "name": "Bagel Country",
@@ -185,7 +185,7 @@
     "id": 5,
     "slug": "Croissants",
     "prettyName": "Croissants",
-    "description": "Déjate cautivar por nuestra selección de cafés artesanales en diferentes presentaciones.",
+    "description": "",
     "plates": [
       {
         "name": "Croisants Jamón y Queso",

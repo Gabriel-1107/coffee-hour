@@ -8,11 +8,13 @@ import { services } from "../../utils/data.ts";
 type ServicesProps = {
   title: string;
   features: string[];
-  icon: string;
+  icon: ImageMetadata;
+  
 };
 
 export interface Props {
   className?: string;
+  dataTranslate: string
 }
 
 const { className } = Astro.props;
@@ -44,7 +46,7 @@ const { className } = Astro.props;
   ></span>
   <Container className="space-y-10 md:sapce-y-12">
     <div class="text-center max-w-3xl mx-auto space-y-4">
-      <Title className="">Servicios</Title>
+      <Title className="" dataTranslate="SERVICES">Servicios</Title>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8">
       {
@@ -52,6 +54,7 @@ const { className } = Astro.props;
           return (
             <Service
               title={service.title}
+              dataTranslate={service.title}
               features={service.features}
               icon={service.icon}
             />

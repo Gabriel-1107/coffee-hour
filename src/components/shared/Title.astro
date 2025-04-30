@@ -1,13 +1,14 @@
 ---
 export interface Props {
   className?: string;
+  dataTranslate?: string
 }
 
-const { className } = Astro.props;
+const { className, dataTranslate } = Astro.props;
 ---
 
 <h1
-  class=`text-heading-1 text-center font-semibold text-2xl sm:text-3xl md:text-4xl ${className}`
+  class=`text-heading-1 text-center font-semibold text-2xl sm:text-3xl md:text-4xl ${className}` data-translate={dataTranslate}
 >
   <slot />
 </h1>

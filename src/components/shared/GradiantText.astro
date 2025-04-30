@@ -1,5 +1,8 @@
+---
+const { dataTranslate } = Astro.props;
+---
 <span
-  class="text-transparent bg-clip-text bg-gradient-to-br from-orange-900 from-20% via-yellow-600 via-30% to-orange-800"
+  class="text-transparent bg-clip-text bg-gradient-to-br from-orange-900 from-20% via-yellow-600 via-30% to-orange-800" data-translate={dataTranslate}
 >
-  <slot />
+  <slot/>
 </span>

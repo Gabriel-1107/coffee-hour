@@ -1,27 +1,33 @@
 ---
 import Container from "../shared/Container.astro";
 import Title from "../shared/Title.astro";
+import avatar1 from "../../assets/images/avatar1.gif"
+import avatar2 from "../../assets/images/avatar2.gif"
+import avatar3 from "../../assets/images/avatar3.gif"
+import avatar4 from "../../assets/images/avatar4.gif"
+import avatar5 from "../../assets/images/avatar5.gif"
+import avatar6 from "../../assets/images/avatar6.gif"
+import Image from "../common/Image.astro";
 ---
 
 <section class="relative pt-32 lg:pt-36">
   <Container>
-    <Title className="space-y-10 md:space-y-12 mb-10 text-center">
+    <Title className="space-y-10 md:space-y-12 mb-10 text-center" dataTranslate="TESTIMONIOS">
       Testimonios
-      <p class="text-xl">Conoce la opinión de nuestros clientes</p>
     </Title>
 
     <div class="testimonials-container">
       {[
-        { name: "Juan Antonio López Martínez", image: "../../src/assets/images/avatar2.gif", message: "Excelente lugar para comer y pasar un rato agradable con amigos y/o pareja." },
-        { name: "María Zúñiga", image: "../../src/assets/images/avatar5.gif", message: "Muy bien! Buen servicio, buena comida." },
-        { name: "Iván Aguilar", image: "../../src/assets/images/avatar4.gif", message: "Buena calidad de comida, buen servicio, recibe tarjeta de crédito y facturan." },
-        { name: "Deyhanira Vasallo", image: "../../src/assets/images/avatar1.gif", message: "Excelente atención, el café delicioso, un lugar muy agradable." },
-        { name: "Juan Mendoza", image: "../../src/assets/images/avatar3.gif", message: "Excelente servicio y atención. Tienen wifi y se puede trabajar agusto" },
-        { name: "Guadalupe López", image: "../../src/assets/images/avatar6.gif", message: "Delicioso café y excelente servicio." }
+        { name: "Juan Antonio López Martínez", image: avatar2, message: "TESTIMONIOS1"  },
+        { name: "María Zúñiga", image: avatar5, message: "TESTIMONIOS2" },
+        { name: "Iván Aguilar", image: avatar4, message: "TESTIMONIOS3" },
+        { name: "Deyhanira Vasallo", image: avatar1, message: "TESTIMONIOS4" },
+        { name: "Juan Mendoza", image: avatar3, message: "TESTIMONIOS5" },
+        { name: "Guadalupe López", image: avatar6, message: "TESTIMONIOS6" }
       ].map((testimonial, index) => (
         <div class="card">
           <div class="header">
-            <img src={testimonial.image} alt={testimonial.name} class="image" />
+            <Image src={testimonial.image} alt={testimonial.name} class="image" style="width: 4rem; height: 4rem;"/>
             <div>
               <div class="stars">
                 {[...Array(5)].map((_, i) => (
@@ -33,7 +39,7 @@ import Title from "../shared/Title.astro";
               <p class="name dark:text-white">{testimonial.name}</p>
             </div>
           </div>
-          <p class="message dark:text-white">{testimonial.message}</p>
+          <p class="message dark:text-white" data-translate={testimonial.message}>{testimonial.message}</p>
         </div>
       ))}
     </div>
@@ -80,11 +86,12 @@ import Title from "../shared/Title.astro";
   }
   
   .image {
-    height: 4rem;
-    width: 4rem;
-    border-radius: 9999px;
-    object-fit: cover;
-  }
+  height: 2.5rem; /* antes 4rem */
+  width: 2.5rem;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
   
   .stars {
     display: flex;

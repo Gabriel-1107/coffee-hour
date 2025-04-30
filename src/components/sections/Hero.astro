@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import Button from "../shared/Button.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import ByNumber from "./ByNumber.astro";
@@ -28,10 +27,10 @@ const { className } = Astro.props;
              font-bold text-heading-1"
       >
        
-        <GradiantText>COFFFE HOUR <br /> </GradiantText>
+        <GradiantText>COFFEE HOUR <br /> </GradiantText>
         
       </h1>
-      <Paragraph className="mt-8 ">
+      <Paragraph className="mt-8" dataTranslate="INTRO">
         En el corazón de cada taza, hay una historia por descubrir. En Coffee Hour, no solo servimos café, creamos experiencias. Desde el primer sorbo hasta el último, te invitamos a disfrutar de bebidas cuidadosamente preparadas, postres irresistibles y un ambiente acogedor que te hará sentir como en casa.
       </Paragraph>
 

@@ -3,7 +3,7 @@
     "id": 1,
     "slug": "Espresso",
     "prettyName": "Espresso",
-    "description": "Refrescantes bebidas frías con una variedad de sabores dulces y cremosos.",
+    "description": "",
     "plates": [
       {
         "name": "Espresso Sencillo",
@@ -69,7 +69,7 @@
     "id": 3,
     "slug": "Capuchino",
     "prettyName": "Capuchino",
-    "description": "Disfruta de nuestras deliciosas bebidas de chai, cálidas o frías, con un toque especiado irresistible.",
+    "description": "",
     "plates": [
       {
         "name": "Capuchino ",
@@ -112,7 +112,7 @@
     "id": 4,
     "slug": "Latte",
     "prettyName": "Latte",
-    "description": "Saborea la intensidad de nuestros espressos con diversas presentaciones para cada gusto.",
+    "description": "",
     "plates": [
       {
         "name": "Latte Caliente",
@@ -131,12 +131,12 @@
       },
       {
         "name": "Latte Frío (Saborizado)",
-        "description": "Espresso suave coronado con una generosa porción de crema batida para un toque dulce y cremoso.",
+        "description": "",
         "price": 80
       },
       {
         "name": "Latte Frío Moka",
-        "description": "Exquisito espresso servido sobre una bola de helado de vainilla, una combinación perfecta de calor y frío.",
+        "description": "",
         "price": 80
       }
     ]
@@ -145,7 +145,7 @@
     "id": 5,
     "slug": "Chocolates",
     "prettyName": "Chocolates",
-    "description": "Déjate cautivar por nuestra selección de cafés artesanales en diferentes presentaciones.",
+    "description": "",
     "plates": [
       {
         "name": "Chocolate Obscuro",
@@ -169,7 +169,7 @@
       },
       {
         "name": "Chocolate Obscuro con Bombones",
-        "description": "Suave café con una generosa cantidad de leche vaporizada, creando una textura cremosa y delicada.",
+        "description": "",
         "price": 80
       }
     ]

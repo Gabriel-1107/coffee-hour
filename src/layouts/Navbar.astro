@@ -2,40 +2,58 @@
 import Container from "../components/shared/Container.astro";
 import Navitem from "../components/shared/Navitem.astro";
 import BtnLink from "../components/shared/BtnLink.astro";
-
+import Logocafe from "../../src/assets/images/logocafe.png"
+import Image from "~/components/common/Image.astro";
+import logodark from "../../src/assets/images/logodark.jpg"
 
  
 const navItems = [
   {
-    href: "/coffee-hour",
-    text: "Inicio",
+    href: "/",
+    text: "INICIO",
   },
   {
     href: "",
-    text: "Menu",
+    text: "MENU",
     submenu: [
-      { href: "/coffee-hour/desayunos", text: "Desayunos" },
-      { href: "/coffee-hour/snacks", text: "Snacks" },
-      { href: "/coffee-hour/bebidas-calientes", text: "Bebidas Calientes" },
-      { href: "/coffee-hour/bebidas-frias", text: "Bebidas Frías" },
+      { href: "/desayunos", text: "DESAYUNO" },
+      { href: "/snacks", text: "SNACKS" },
+      { href: "/bebidas-calientes", text: "CALIENTES" },
+      { href: "/bebidas-frias", text: "FRIAS" },
       // { href: "/coffee-hour/promociones", text: "Promociones" },
     ],
   },
   {
-    href: "/coffee-hour/galeria",
-    text: "Galeria",
+    href: "/galeria",
+    text: "GALERIA",
   },
   {
-    href: "/coffee-hour/videos",
+    href: "videos",
     text: "Videos",
   },
-  {
-    href: "/coffee-hour/blogs",
-    text: "Blogs",
-  },
+  // {
+  //   href: "/blogs",
+  //   text: "Blogs",
+  // },
 ];
 
+export interface button {
+  button : string
+}
+export interface laguages {
+  en: button,
+  es: button
+}
 
+const DEFAULT_LANGUAGE = 'es';
+const content:laguages = {
+  en: {
+    button: "Español",
+  },
+  es: {
+    button: "English",
+  },
+};
 
 ---
 
@@ -46,24 +64,29 @@ const navItems = [
       <div class="min-w-max inline-flex relative">
         <a href="/coffee-hour" class="-m-1.5 p-1.5 flex items-center justify-center">
           <div class="logo-container">
-            <img class="logo-img" src="../../src/assets/images/logocafe.png" alt="logo">
+            <!-- Logo para modo claro -->
+            <Image class="logo-img block dark:hidden" src={Logocafe.src} alt="logo claro" />
+          
+            <!-- Logo para modo oscuro -->
+            <img class="logo-img hidden dark:block" src={logodark.src} alt="logo oscuro" />
           </div>
+          
           <div class="inline-flex text-lg font-semibold text-heading-1">
             COFFEE HOUR
           </div>
         </a>
       </div>
       
-      <div
+       <div
         data-nav-overlay
         aria-hidden="true"
         class="fixed hidden inset-0 lg:!hidden bg-box-bg bg-opacity-50 backdrop-filter backdrop-blur-xl"
       >
       </div>
       <div
-        data-navbar
-        class="flex h-0 overflow-hidden lg:!h-auto lg:scale-y-100 duration-300 ease-linear flex-col gap-y-6 gap-x-4 lg:flex-row w-full lg:justify-between lg:items-center absolute lg:relative top-full lg:top-0 bg-body lg:bg-transparent border-x border-x-box-border lg:border-x-0"
-      >
+      data-navbar
+      class="flex h-0 overflow-hidden lg:overflow-visible lg:!h-auto lg:scale-y-100 duration-300 ease-linear flex-col gap-y-6 gap-x-4 lg:flex-row w-full lg:justify-between lg:items-center absolute lg:relative top-full lg:top-0 bg-body lg:bg-transparent border-x border-x-box-border lg:border-x-0"
+      >    
         <ul
           class="border-t border-box-border lg:border-t-0 px-6 lg:px-0 pt-6 lg:pt-0 flex flex-col lg:flex-row gap-y-4 gap-x-3 text-lg text-heading-2 w-full lg:justify-center lg:items-center"
         >
@@ -74,22 +97,22 @@ const navItems = [
           }
         </ul>
 
-        <div
-          class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0"
-        >
-          <BtnLink
-            text="Español"
-            href="#cta"
-            className="flex justify-center w-full sm:w-max"
-            variant="primary"
-          />
-        </div>
+        <div class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0">
+          <a
+            id="language-toggle"
+            class={`px-6 py-3 rounded-full outline-none relative overflow-hidden border duration-300 ease-linear
+              after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554]
+              hover:after:opacity-100 hover:after:scale-[2.5] flez justify-center w-full sm:w-max dark:text-white hover:text-gray-200`}
+          >
+            <span class={`relative  z-10`} set:html={content[DEFAULT_LANGUAGE].button}>Español</span>
+          </a>
+      </div>
       </div>
 
       <div class="min-w-max flex items-center gap-x-3">
         <button
           data-switch-theme
-          class="outline-none flex relative text-heading-2 rounded-full p-2 lg:p-3 border border-box-border hover:bg-slate-200 dark:hover:bg-slate-800"
+          class="outline-none flex relative text-heading-2 rounded-full p-2 lg:p-3 border border-box-border hover:bg-slate-200 dark:hover:bg-slate-800 dark:text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -172,3 +195,88 @@ const navItems = [
     }
   }
 </style>
+
+<script>
+    
+  import { setLanguage, translate } from "../js/translate";
+  
+  const DEFAULT_LANGUAGE = 'es';
+  const content:any = {
+    en: {
+      button: "Español",
+    },
+    es: {
+      button: "English",
+    },
+    
+  };
+  
+  const languageToggle = document.getElementById("language-toggle");
+  const buttonText = languageToggle!.querySelector("span") as HTMLElement | null;
+  
+  const renderButton = () => {
+    const languageToggle = document.getElementById("language-toggle");
+  //   console.log("languaje toggle",languageToggle);
+    
+    const buttonText = languageToggle!.querySelector("span") as HTMLElement | null;
+    if(languageToggle){
+      languageToggle!.addEventListener("click", (event) => {
+      //   console.log("ejecutando");
+        
+        event.preventDefault();
+        const currentLanguage = window.localStorage.getItem("languageDefault") || DEFAULT_LANGUAGE;
+          console.log(currentLanguage);
+      //   console.log("click button",currentLanguage, "Idioma que debe verse en el boton en el click",content[currentLanguage].button);
+        buttonText!.textContent = content[currentLanguage].button;
+        setLanguage(currentLanguage);
+      });
+    }
+  }
+  renderButton()
+
+  const handleTranslate= () =>{
+      const currentLanguage = window.localStorage.getItem("languageDefault") || DEFAULT_LANGUAGE;
+      // console.log({currentLanguage},"Idioma que debe verse en el boton",content[currentLanguage].button);
+
+      buttonText!.textContent = content[currentLanguage].button;
+      
+      translate(currentLanguage);
+  }
+  // // console.log("Change language boton",changeLanguageBtn, "Default",DEFAULT_LANGUAGE, "")
+
+  window.addEventListener("load", ( )=>{
+  //   console.log("Dentro Load");
+    
+    renderButton();
+    handleTranslate();
+  });
+  document.addEventListener("DOMContentLoaded", () => {
+  //   console.log("Dentro DOMContent");
+    renderButton();
+    handleTranslate();
+  });
+  
+  
+  document.addEventListener("astro:after-swap", () => {
+  //   console.log("Dentro astro after");
+      renderButton();
+      handleTranslate();
+  })
+
+</script>
+
+<script>
+
+  import { setLanguage, translate } from "../js/translate.ts"
+
+  // I don't like this, but when change page the language have to set again
+  window.addEventListener('popstate', function() {
+      // window.location.reload();
+      
+      const currentLanguage = window.localStorage.getItem("languageDefault") || 'es';
+      // console.log("execute", currentLanguage);
+      
+      translate(currentLanguage);
+  }, false);
+
+</script>

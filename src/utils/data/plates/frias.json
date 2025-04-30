@@ -36,7 +36,7 @@
       },
       { "name": "Frappé chocolate dálmata", "description": "", "price": 105 },
       {
-        "name": "Frappó (con chocolate blanco y fresa)",
+        "name": "Frappé (con chocolate blanco y fresa)",
         "description": "",
         "price": 105
       },
@@ -97,7 +97,7 @@
     "id": 6,
     "slug": "smoothies",
     "prettyName": "Smoothies",
-    "description": "Todos los precios incluyen IVA.",
+    "description": "",
     "plates": [
       { "name": "Una sola fruta", "description": "", "price": 75 },
       {

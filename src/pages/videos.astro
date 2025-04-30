@@ -1,0 +1,151 @@
+---
+import Video from "../components/shortcodes/Video";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/shared/Container.astro";
+import Title from "../components/shared/Title.astro";
+const metadata = {
+  title: 'Coffee Hour',
+  ignoreTitleTemplate: true,
+};
+const videos = [
+  {
+    title: "videotitle1",
+    description: "videodes1",
+    url: "video1.mp4"
+  },
+  {
+    title: "videotitle2",
+    description: "videodes2",
+    url: "video2.mp4"
+  },
+  {
+    title: "videotitle3",
+    description: "videodes3",
+    url: "video3.mp4"
+  },
+];
+---
+
+<Layout title='Videos'>
+  <Container className="space-y-10 md:space-y-12 mb-10">
+    <section id="videos" class="videos-section mt-24">
+      <Title className="text-center text-4xl font-bold mb-6">Videos</Title>
+      <p class="text-lg mb-9 dark:text-white" data-translate="EXPLORA">
+        Explora más con nosotros.
+      </p>
+
+      <div class="videos-grid">
+        {videos.map((video) => (
+          <div class="card">
+            <span></span>
+            <div class="content">
+              <div>
+                <h3 data-translate={video.title}>{video.title}</h3>
+                <p data-translate={video.description}>{video.description}</p>
+                <Video title={video.title} src={video.url} width={500} height={500} />
+              </div>
+            </div>
+          </div>
+        ))}        
+      </div>
+    </section>
+  </Container>
+
+  <style>
+    .videos-section {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .videos-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      justify-items: center;
+    }
+
+    .card {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      color: #fff;
+      transition: 0.5s;
+      cursor: pointer;
+      border-radius: 1.2em;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-20px);
+    }
+
+    .card::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(45deg, #e6e6e6, #ffffff);
+      border-radius: 1.2em;
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #e6e6e6, #ffffff);
+      filter: blur(30px);
+    }
+
+    .card span {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      right: 6px;
+      bottom: 6px;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 2;
+      border-radius: 1em;
+    }
+
+    .card span::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .card .content {
+      position: relative;
+      padding: 1rem;
+      z-index: 10;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card h3,
+    .card p {
+      color: white;
+      text-align: center;
+      margin: 0;
+    }
+
+    .card iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 8px;
+    }
+  </style>
+</Layout>

@@ -17,9 +17,10 @@ type SolutionsProps = {
 
 export interface Props {
   className?: string;
+  dataTranslate: string
 }
 
-const { className } = Astro.props;
+const { className, dataTranslate } = Astro.props;
 ---
 
 <section id="solutions" class=`flex flex-col ${className}`>
@@ -37,15 +38,15 @@ const { className } = Astro.props;
           >
             <div class="max-w-md mx-auto w-11/12 flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
               <Title>
-                <GradiantText>{solution.title}</GradiantText>
+                <GradiantText dataTranslate={solution.title}>{solution.title}</GradiantText>
               </Title>
-              <Paragraph className="mt-8 font-medium text:lg md:text-2xl">
+              <Paragraph className="mt-8 font-medium text:lg md:text-2xl" dataTranslate={solution.painPoint}>
                 {solution.painPoint}
               </Paragraph>
-              <Paragraph className="mt-3 ">
+              <Paragraph className="mt-3 " dataTranslate={solution.agitatepainPoint}>
                 {solution.agitatepainPoint}
               </Paragraph>
-              <Paragraph className="mt-3 font-medium">
+              <Paragraph className="mt-3 font-medium" dataTranslate={solution.solution}>
                 {solution.solution}
               </Paragraph>
             </div>

@@ -1,18 +1,19 @@
 ---
 import Container from "../shared/Container.astro";
-import menu from "../../utils/data/menu-gallery.json"
+import menu from "../../utils/data/menu-gallery.ts"
 import Title from "../shared/Title.astro";
 import { Icon } from 'astro-icon/components';
+import Image from "../common/Image.astro";
 
 interface itemgallery {
   image: {
-    src: string,
+    src: ImageMetadata,
     alt: string,
   },
   precio: number,
   nombre: string,
   estrellas: number,
-  numerodeestrellas: number
+  numerodeestrellas: number,
 }
 const finalMenu:itemgallery[] = menu; 
 ---
@@ -20,42 +21,46 @@ const finalMenu:itemgallery[] = menu;
 
     <section id="tranding">
       <div class="container">
-        <div class="text-center  max-w-3xl mx-auto">
-       <Title className="space-y-10 md:space-y-12 mb-10 text-center">Galeria</Title>
-      </div>
+        <div class="text-center max-w-3xl mx-auto mt-12">
+          <Title className="text-center text-4xl font-bold mb-6" dataTranslate="GALERIA">
+            Galeria
+          </Title>
+        </div>
+        </div>        
       <div class="container">
         <div class="swiper tranding-slider">
           <div class="swiper-wrapper">
-              {
-                  finalMenu.map((platillo:itemgallery )=>{
-                      return (
-                          <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                              <img src={platillo.image.src} alt={platillo.image.alt}/>
-                            </div>
-                            <div class="tranding-slide-content">
-                              <h1 class="food-price custom-font">${platillo.precio}</h1>
-                              <div class="tranding-slide-content-bottom">
-                                <h2 class="food-name custom-font">
-                                  {platillo.nombre}
-                                </h2>
-                                <h3 class="food-rating custom-font">
-                                  <span>{platillo.estrellas}</span>
-                                  {/* <div class="rating">
-                                    {
-                                      Array.from({ length: platillo.numerodeestrellas }, (_, index) => (
-                                        <ion-icon name="star"></ion-icon>
-                                      ))
-                                    }
-                                  </div> */}
-                                </h3>
-                              </div>
-                            </div>
+            {
+              finalMenu.map((platillo: itemgallery) => {
+                return (
+                  <div class="swiper-slide tranding-slide">
+                    <div class="tranding-slide-img">
+                      <Image src={platillo.image.src} alt={platillo.image.alt} />
+                    </div>
+                    <div class="tranding-slide-content">
+                      <h1 class="food-price custom-font">${platillo.precio}</h1>
+                      <div class="tranding-slide-content-bottom">
+                        <h2 class="food-name custom-font" data-translate={platillo.nombre}>
+                          {platillo.nombre}
+                        </h2>
+                        <h3 class="food-rating custom-font" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                          <span>{platillo.estrellas}</span>
+                          <div class="stars" style={{ display: 'flex', gap: '2px' }}>
+                            {[...Array(5)].map((_, i) => (
+                              <svg ={i} width="16" height="16" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                              </svg>
+                            ))}
                           </div>
-                      );
-                  })
-              }
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })
+            }
           </div>
+          
 
           <div class="tranding-slider-control">
             <div class="swiper-button-prev slider-arrow">
@@ -177,16 +182,15 @@ html {
 }
 
 .custom-font {
-
-font-size: 2rem;
-/* font-size: 62.5%; */
-font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
 }
-
-/* body {
+  
+body {
   font-size: 1.6rem;
   background: var(--bg);
-} */
+}
 
 .container {
   max-width: 124rem;
@@ -263,13 +267,24 @@ font-family: "Montserrat", sans-serif;
   top: 2rem;
   right: 2rem;
   color: var(--white);
+  /* Manteniendo color y ubicación sin cambios */
 }
 
+/* Solo modificamos nombre y estrellas para mayor legibilidad */
 .tranding-slide-content .tranding-slide-content-bottom {
   position: absolute;
   bottom: 2rem;
   left: 2rem;
   color: var(--white);
+  background: rgba(0, 0, 0, 0.4); /* Fondo oscuro transparente */
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 80%;
+}
+
+.tranding-slide-content .food-name,
+.tranding-slide-content .food-rating {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .food-rating {
@@ -360,6 +375,11 @@ font-family: "Montserrat", sans-serif;
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
 }
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.125rem;
+  color: rgb(255, 217, 0);
+}
 </style>
-
-

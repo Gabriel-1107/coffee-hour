@@ -1,74 +1,73 @@
 ---
 import frias from "../utils/data/plates/frias.json";
 import Layout from "../layouts/Layout.astro";
-console.log("This", );
 ---
-<!-- Quick Nav -->
 <Layout title="Welcome to the Agency Coffee Hour">
-    <section id="menu-cafeteria" class="relative  dark:bg-gradient-to-br dark:from-orange-800 dark:to-yellow-200">
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <div class="mb-10 sticky top-20 z-10" >
-         <nav class="bg-gray-300 dark:bg-gray-600 text-white  dark:text-white rounded-full max-w-5xl mx-auto swiper-plates w-full" >
-           <ul id="plate-nav" class="px-4 py-3 swiper-wrapper h-auto w-auto flex space-x-4 md:space-x-8 overflow-x-auto md:overflow-visible">
-             {frias.map((plate:any) => (
-               <li class="swiper-slide !w-max">
-                 <a href={`#${plate.slug}`} class="btn-tertiary whitespace-nowrap transition-colors duration-300 hover:text-secondary focus:ring-2 focus:ring-offset-2">
-                   <span class="dark:text-white text-black">{plate.prettyName}</span>
-                 </a>
-               </li>
-             ))}
-           </ul>
-         </nav>
-    </div>
-     
-    <div class="grid grid-cols-1 gap-y-32">
+  <section id="menu-cafeteria" class="relative">
+    <br /><br /><br /><br /><br />
+
+    <!-- Barra de navegación por categorías -->
+    <div class="mb-10 sticky top-20 z-10">
+      <nav class="bg-gray-300 dark:bg-gray-600 text-white w-full px-2 sm:px-4 md:px-0 swiper-plates">
+        <ul class="px-2 py-2 md:px-4 md:py-3 swiper-wrapper flex space-x-3 md:space-x-8 overflow-x-auto scrollbar-hide w-full justify-start md:justify-center">
         {frias.map((plate: any) => (
-            <div id={plate.slug} class="space-y-16 scroll-mt-20">
-                <div class="flex flex-col items-center gap-2 max-w-lg mx-auto text-balance text-center">
-                    <h3 class="h4 text-brand-green/70 text-4xl font-bold dark:text-white">{plate.prettyName}</h3>
-                    <p class="dark:text-white">{plate.description}</p>
-                </div>
-    
-                <dl class="max-w-5xl mx-auto">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-16 xl:gap-x-32">
-                        {plate.plates.map((item: any, index: number) => (
-                            <div class="plate-item">
-                                <dt>
-                                    <div class="flex justify-between items-center">
-                                        <span class="font-bold text-2xl tracking-wide dark:text-white">{item.name}</span>
-                                        <span class="font-medium text-lg dark:text-white">
-                                            {new Intl.NumberFormat('es-MX', {
-                                                style: "currency",
-                                                currency: 'MXN',
-                                            }).format(item.price)}
-                                        </span>
-                                    </div>
-                                </dt>
-                                <dd>
-                                    <p class="mt-2 text-black dark:text-white tracking-wide leading-normal text-balance">
-                                        {item.description}
-                                    </p>
-                                </dd>
-                            </div>
-                        ))}
-                    </div>
-                </dl>
-            </div>
-        ))}
+            <li class="swiper-slide !w-max">
+              <a href={`#${plate.slug}`} class="btn-tertiary whitespace-nowrap transition-colors duration-300 hover:text-secondary focus:ring-2 focus:ring-offset-2">
+                <span class="dark:text-white text-black">{plate.prettyName}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
- </section>
-</Layout> 
+
+    <!-- Secciones por categoría -->
+    <div class="grid grid-cols-1 gap-y-32">
+      {frias.map((plate: any) => (
+        <div id={plate.slug} class="space-y-16 scroll-mt-24 md:scroll-mt-20">
+          <div class="flex flex-col items-center gap-2 max-w-lg mx-auto text-center">
+            <h3 class="text-brand-green/70 text-3xl md:text-4xl font-bold dark:text-white">{plate.prettyName}</h3>
+            <p class="dark:text-white text-sm md:text-base">{plate.description}</p>
+          </div>
+
+          <dl class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-x-16 xl:gap-x-32">
+              {plate.plates.map((item: any, index: number) => (
+                <div class="plate-item p-4 md:p-6 rounded-xl transition-all duration-500 hover:scale-105 hover:shadow-lg">
+                  <dt>
+                    <div class="flex justify-between items-center">
+                      <span class="font-bold text-lg md:text-2xl tracking-wide dark:text-white whitespace-normal">{item.name}</span>
+                      <span class="font-medium text-base md:text-lg dark:text-white">
+                        {new Intl.NumberFormat('es-MX', {
+                          style: "currency",
+                          currency: 'MXN',
+                        }).format(item.price)}
+                      </span>
+                    </div>
+                  </dt>
+                  <dd>
+                    <p class="mt-2 text-black dark:text-white tracking-wide leading-normal text-sm md:text-base">{item.description}</p>
+                  </dd>
+                </div>
+              ))}
+            </div>
+          </dl>
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>
+
 <style>
-    .plate-item:hover {
-        transform: scale(1.04);
-        transition: all 0.475s;
-        cursor: pointer;
-    }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 </style>
+
 <script>
 	import Swiper from "swiper";
 	import "swiper/css";
